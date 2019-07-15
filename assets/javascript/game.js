@@ -27,7 +27,7 @@ document.onkeyup = function () {
 
     } else if (guesses === 0) {
         losses++;
-        alert("SORRY, YOU DIDN'T GUESS CORRECTLY. TOO BAD. SO SAD. YOU LOSE")
+        alert("SORRY, YOU DIDN'T GUESS CORRECTLY. TOO BAD. SO SAD. MAYBE YOU'RE NOT PSYCHIC MATERIAL")
         guesses = 9;
         lettersYouGuessed.length = 0;
     } 
