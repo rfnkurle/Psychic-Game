@@ -19,7 +19,7 @@ document.onkeyup = function () {
     //if user's guess matches computer guess:
 //1 is added to "Wins"
     if (userGuess === compGuess) {
-        alert("YOU WIN. WOOHOO");
+        alert('YOU ARE CORRECT, I WAS THINKING OF "'+ compGuess + '" ! YOU WIN. WOOHOO!');
         wins++;
         guesses = 9;
         lettersYouGuessed.length = 0;
@@ -27,7 +27,7 @@ document.onkeyup = function () {
 
     } else if (guesses === 0) {
         losses++;
-        alert("TOO BAD. SO SAD. YOU LOSE")
+        alert("SORRY, YOU DIDN'T GUESS CORRECTLY. TOO BAD. SO SAD. YOU LOSE")
         guesses = 9;
         lettersYouGuessed.length = 0;
     } 
@@ -36,15 +36,18 @@ document.onkeyup = function () {
 
     } 
 
-    var html = "<h1>Psychic Game</h1>" +
+    var html = 
 
-"<p>Guess what letter I'm thinking of</p>"+
-"<p>Wins: " + wins + "</p>" +
-"<p>Losses: " + losses +"</p>" +
+"<p>Guess what letter I'm thinking of...if you can...</p>"+
 "<p>Guesses Left: " + guesses + "</p>" +
-"<p>Letters You've Guessed: " + lettersYouGuessed + "</p>";
+"<p>Letters You've Guessed: " + lettersYouGuessed + "</p>"+
+"<p>Wins: " + wins + "</p>" +
+"<p>Losses: " + losses +"</p>";
 
 document.querySelector("#psychic-game").innerHTML = html;
+
+
 }
+
 
 
